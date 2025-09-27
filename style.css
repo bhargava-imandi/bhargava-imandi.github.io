@@ -15,19 +15,6 @@ body {
 }
 
 /* Top Navigation Bar */
-.topnav a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px; /* space between icon and text */
-  transition: color 0.3s;
-}
-.topnav a:hover {
-  color: #0077cc;
-}
-
 .topnav {
   background: #fff;
   border-bottom: 2px solid #eee;
@@ -38,11 +25,15 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .topnav a {
   text-decoration: none;
   color: #444;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   transition: color 0.3s;
 }
 .topnav a:hover {
@@ -129,25 +120,13 @@ section h2 {
 /* Skills */
 .skills span {
   display: inline-block;
-  background: #cac8c8;
-  color: #020202;
+  background: #eee;
+  color: #333;
   padding: 6px 10px;
   margin: 5px;
   border-radius: 5px;
   font-size: 0.9rem;
 }
-/* Scroll animation for sections */
-.section-animate {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-}
-
-.section-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 /* Projects */
 .projects {
@@ -166,17 +145,57 @@ footer {
   border-top: 1px solid #eee;
 }
 
+/* Scroll Animation */
+.section-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
   .header .photo {
     margin-top: 15px;
   }
+  .header .photo img {
+    width: 180px;
+    height: 180px;
+  }
+  .skills span {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
   .topnav {
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .topnav {
+    flex-direction: row;   /* keep it horizontal */
+    overflow-x: auto;      /* allow horizontal scroll if needed */
+    gap: 15px;
+    padding: 10px 5px;
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+  }
+
+  .topnav a {
+    white-space: nowrap; /* prevent text from wrapping */
+  }
+
+  /* Optional: hide scrollbar */
+  .topnav::-webkit-scrollbar {
+    display: none;
   }
 }
