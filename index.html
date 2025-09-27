@@ -1,157 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhargava | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    html {
-        scroll-behavior: smooth;
-    }
-  </style>
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <!-- Font Awesome CDN for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <!-- Top Navigation Bar -->
-  <nav class="topnav">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="Resume.pdf" download title="Download Resume">
-    <i class="fa-solid fa-file-pdf"></i> Resume
-    </a>
-  </nav>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+  color: #222;
+  line-height: 1.6;
+}
 
-  <div class="container">
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
-    <!-- Header -->
-    <header class="header">
-      <div class="info">
-        <h1>Bhargava Imandi</h1>
-        <p>Machine Learning Engineer | Data Scientist | NLP, CV & Representation Learning</p>
-        <p class="location"><i class="fa-solid fa-location-dot"></i> Bengaluru, India</p>
+/* Top Navigation Bar */
+.topnav {
+  background: #fff;
+  border-bottom: 2px solid #eee;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.topnav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s;
+}
+.topnav a:hover {
+  color: #0077cc;
+}
 
-        <div class="links">
-          <a href="mailto:bhargavav@iisc.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="tel:+919515612567" title="Call"><i class="fa-solid fa-phone"></i></a>
-          <a href="https://github.com/Bhargava-75" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/bhargava75/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
+/* Links (icons) */
+.links a {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #444;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.links a:hover {
+  color: #e53e3e;
+}
 
-      <div class="photo">
-        <img src="profile.png" alt="Profile Photo">
-      </div>
-    </header>
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.header .info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+.header .info p {
+  margin-bottom: 6px;
+}
+.header .location {
+  color: #666;
+}
+.header .photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 75%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+}
+.header .photo img:hover {
+  transform: scale(1.05);
+}
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a Machine Learning Engineer with strong experience in NLP, Computer Vision, 
-        and Representation Learning. Currently Transforming Road Safety <b>@Netradyne</b>. I enjoy solving real-world problems and have 
-        worked on projects in visual storytelling, recommendation systems, and 
-        large-scale ML deployment.
-      </p>
-    </section>
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+.card {
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
 
-    <!-- Work Experience -->
-    <section id="work">
-      <h2>Work Experience</h2>
-      <div class="card">
-        <h3>Data Scientist @ Netradyne <span class="location">Bengaluru</span></h3>
-        <p class="date">July 2024 – Present</p>
-        <p>
-          Developed traffic violation detection, enhanced pedestrian collision warning,
-          built text-to-image retrieval with CLIP, and managed MLFlow pipelines.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Graduate Research @ IISc & Sony Research India</h3>
-        <p class="date">Jan 2023 – June 2024</p>
-        <p>
-          Visual & video storytelling using ViT, GPT-2, BLIP, T5, Llama2.  
-          Social story generation for children with Autism using Llama2 + Stable Diffusion.
-        </p>
-      </div>
-    </section>
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
 
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card">
-        <h3>Indian Institute of Science, Bangalore</h3>
-        <p>M.Tech in Computer Science and Automation (2022–24) | CGPA: 7.2/10</p>
-      </div>
-      <div class="card">
-        <h3>RGUKT Nuzvid</h3>
-        <p>B.Tech in Computer Science and Engineering (2018–22) | CGPA: 8.99/10</p>
-      </div>
-    </section>
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 15px;
+}
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Python</span>
-        <span>PyTorch</span>
-        <span>TensorFlow</span>
-        <span>Natural Language Processing</span>
-        <span>Representation Learning</span>
-        <span>Computer Vision</span>
-        <span>Recommendation Systems</span>
-        <span>ONNX</span>
-        <span>TensorRT</span>
-        <span>SNPE</span>
-        <span>Quantization</span>
-        <span>C</span>
-        <span>Java</span>
-        <span>scikit-learn</span>
-        <span>LaTeX</span>
-      </div>
-    </section>
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>Deep Representation Learning 
-            <a href="https://github.com/Bhargava-75/Advanced-Representation-Learning" target="_blank" title="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </h3>
-          <p>Worked on VAEs, GANs, Self-Supervised Learning.</p>
-        </div>
-        <div class="card">
-          <h3>NLP Projects 
-            <a href="https://github.com/Bhargava-75/Deep-Learning-For-NLP" target="_blank" title="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </h3>
-          <p>Sentiment Analysis, Transliteration, Recommendation System.</p>
-        </div>
-        <div class="card">
-          <h3>Visual & Video Storytelling
-            <a href="https://bhargava-75.github.io/video-storytelling/" target="_blank" title="View Project">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </h3>
-          <p>Generated narratives from images/videos.</p>
-        </div>
-      </div>
-    </section>
+/* Scroll Animation */
+.section-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 Bhargava Portfolio</p>
-    </footer>
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header .photo {
+    margin-top: 15px;
+  }
+  .header .photo img {
+    width: 180px;
+    height: 180px;
+  }
+  .skills span {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
+  .topnav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .topnav {
+    flex-direction: row;   /* keep it horizontal */
+    overflow-x: auto;      /* allow horizontal scroll if needed */
+    gap: 15px;
+    padding: 10px 5px;
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+  }
 
-  </div>
-</body>
-</html>
+  .topnav a {
+    white-space: nowrap; /* prevent text from wrapping */
+  }
+
+  /* Optional: hide scrollbar */
+  .topnav::-webkit-scrollbar {
+    display: none;
+  }
+}
