@@ -54,6 +54,31 @@ body {
   color: #e53e3e;
 }
 
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.edu-logo {
+  width: 50px;   /* adjust size */
+  height: 50px;
+  object-fit: contain;
+}
+
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.exp-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
 /* Header */
 .header {
   display: flex;
@@ -111,6 +136,37 @@ section h2 {
   font-size: 1.1rem;
   margin-bottom: 8px;
 }
+.card a {
+  color: #0077cc;        /* blue text */
+  text-decoration: none; /* remove underline */
+  font-weight: 500;      /* slightly bold to stand out */
+}
+
+.card a:hover {
+  text-decoration: underline; /* underline only on hover */
+}
+
+
+.education-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes right-side info */
+  gap: 15px;
+}
+
+.edu-info {
+  flex-grow: 1; /* take available space */
+}
+
+.edu-meta {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #2c2a2a;
+}
+.edu-meta span {
+  display: block; /* stack Year and CGPA */
+}
+
 .date {
   font-size: 0.9rem;
   color: #555;
@@ -120,8 +176,8 @@ section h2 {
 /* Skills */
 .skills span {
   display: inline-block;
-  background: #eee;
-  color: #333;
+  background: #dcd5d5;
+  color: #000000;
   padding: 6px 10px;
   margin: 5px;
   border-radius: 5px;
