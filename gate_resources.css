@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f3f4f6;
+}
+
+#gate-resources {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  line-height: 1.7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#gate-resources h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+#gate-resources p {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+#gate-resources h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  color: #111827;
+  border-left: 4px solid #2563eb;
+  padding-left: 0.75rem;
+}
+
+#gate-resources ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#gate-resources ul ul {
+  margin-top: 0.5rem;
+}
+
+#gate-resources li {
+  margin-bottom: 0.6rem;
+  color: #374151;
+}
+
+#gate-resources strong {
+  color: #111827;
+}
+
+#gate-resources a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#gate-resources a:hover {
+  text-decoration: underline;
+}
+
+#gate-resources h3 + ul {
+  background: #f9fafb;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+#gate-resources p:last-of-type {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #e5e7eb;
+  font-size: 0.95rem;
+}
